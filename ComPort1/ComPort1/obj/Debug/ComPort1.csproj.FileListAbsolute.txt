@@ -1,0 +1,10 @@
+D:\ComPort1\ComPort1\bin\Debug\ComPort1.exe.config
+D:\ComPort1\ComPort1\bin\Debug\ComPort1.exe
+D:\ComPort1\ComPort1\bin\Debug\ComPort1.pdb
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.csproj.AssemblyReference.cache
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.Form1.resources
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.Properties.Resources.resources
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.csproj.GenerateResource.cache
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.csproj.CoreCompileInputs.cache
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.exe
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.pdb
