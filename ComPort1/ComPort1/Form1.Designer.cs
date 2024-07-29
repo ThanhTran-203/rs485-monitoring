@@ -141,7 +141,7 @@
             this.cbStopBit.Items.AddRange(new object[] {
             "One",
             "Two"});
-            this.cbStopBit.Location = new System.Drawing.Point(125, 182);
+            this.cbStopBit.Location = new System.Drawing.Point(140, 182);
             this.cbStopBit.Name = "cbStopBit";
             this.cbStopBit.Size = new System.Drawing.Size(121, 28);
             this.cbStopBit.TabIndex = 4;
@@ -156,7 +156,7 @@
             "None",
             "Odd",
             "Even"});
-            this.cbParity.Location = new System.Drawing.Point(125, 152);
+            this.cbParity.Location = new System.Drawing.Point(140, 152);
             this.cbParity.Name = "cbParity";
             this.cbParity.Size = new System.Drawing.Size(121, 28);
             this.cbParity.TabIndex = 3;
@@ -171,7 +171,7 @@
             "6",
             "7",
             "8"});
-            this.cbDataBits.Location = new System.Drawing.Point(125, 122);
+            this.cbDataBits.Location = new System.Drawing.Point(140, 122);
             this.cbDataBits.Name = "cbDataBits";
             this.cbDataBits.Size = new System.Drawing.Size(121, 28);
             this.cbDataBits.TabIndex = 2;
@@ -187,7 +187,7 @@
             "4800",
             "9600",
             "19200"});
-            this.cbBaudRate.Location = new System.Drawing.Point(125, 92);
+            this.cbBaudRate.Location = new System.Drawing.Point(140, 92);
             this.cbBaudRate.Name = "cbBaudRate";
             this.cbBaudRate.Size = new System.Drawing.Size(121, 28);
             this.cbBaudRate.TabIndex = 1;
@@ -198,7 +198,7 @@
             this.cbComPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbComPort.ForeColor = System.Drawing.Color.Red;
             this.cbComPort.FormattingEnabled = true;
-            this.cbComPort.Location = new System.Drawing.Point(125, 62);
+            this.cbComPort.Location = new System.Drawing.Point(140, 62);
             this.cbComPort.Name = "cbComPort";
             this.cbComPort.Size = new System.Drawing.Size(121, 28);
             this.cbComPort.TabIndex = 0;

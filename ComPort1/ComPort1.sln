@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComPort1", "ComPort1\ComPort1.csproj", "{2FFED831-1A75-4114-91E4-1E1D02C7AE8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Render", "Render\Render.csproj", "{A997F9C1-A3E0-47CF-B13C-73C25A33F46A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2FFED831-1A75-4114-91E4-1E1D02C7AE8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FFED831-1A75-4114-91E4-1E1D02C7AE8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FFED831-1A75-4114-91E4-1E1D02C7AE8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A997F9C1-A3E0-47CF-B13C-73C25A33F46A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A997F9C1-A3E0-47CF-B13C-73C25A33F46A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A997F9C1-A3E0-47CF-B13C-73C25A33F46A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A997F9C1-A3E0-47CF-B13C-73C25A33F46A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

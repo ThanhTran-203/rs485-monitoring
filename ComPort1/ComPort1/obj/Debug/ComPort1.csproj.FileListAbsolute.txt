@@ -8,3 +8,4 @@ D:\ComPort1\ComPort1\obj\Debug\ComPort1.csproj.GenerateResource.cache
 D:\ComPort1\ComPort1\obj\Debug\ComPort1.csproj.CoreCompileInputs.cache
 D:\ComPort1\ComPort1\obj\Debug\ComPort1.exe
 D:\ComPort1\ComPort1\obj\Debug\ComPort1.pdb
+D:\ComPort1\ComPort1\obj\Debug\ComPort1.Form2.resources
