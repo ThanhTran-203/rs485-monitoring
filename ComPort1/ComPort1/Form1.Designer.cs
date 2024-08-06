@@ -54,8 +54,17 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbStatus = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tReceivedData = new System.Windows.Forms.TextBox();
+            this.cbAlwaysUpdate = new System.Windows.Forms.CheckBox();
+            this.cbAddToOldData = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -238,6 +247,7 @@
             this.btDelete.TabIndex = 3;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = true;
+            this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // btStop
             // 
@@ -306,6 +316,10 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 5;
             // 
+            // serialPort1
+            // 
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(387, 466);
@@ -340,11 +354,86 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.Location = new System.Drawing.Point(7, 14);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 29);
+            this.label6.TabIndex = 13;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lbStatus);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Location = new System.Drawing.Point(708, 495);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(153, 98);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "COM PORT STATUS";
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatus.Location = new System.Drawing.Point(46, 37);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(59, 31);
+            this.lbStatus.TabIndex = 14;
+            this.lbStatus.Text = "OFF";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cbAddToOldData);
+            this.groupBox4.Controls.Add(this.tReceivedData);
+            this.groupBox4.Controls.Add(this.cbAlwaysUpdate);
+            this.groupBox4.Location = new System.Drawing.Point(844, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(366, 335);
+            this.groupBox4.TabIndex = 16;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Received Data";
+            // 
+            // tReceivedData
+            // 
+            this.tReceivedData.Location = new System.Drawing.Point(16, 31);
+            this.tReceivedData.Multiline = true;
+            this.tReceivedData.Name = "tReceivedData";
+            this.tReceivedData.Size = new System.Drawing.Size(333, 243);
+            this.tReceivedData.TabIndex = 0;
+            // 
+            // cbAlwaysUpdate
+            // 
+            this.cbAlwaysUpdate.AutoSize = true;
+            this.cbAlwaysUpdate.Location = new System.Drawing.Point(33, 294);
+            this.cbAlwaysUpdate.Name = "cbAlwaysUpdate";
+            this.cbAlwaysUpdate.Size = new System.Drawing.Size(117, 20);
+            this.cbAlwaysUpdate.TabIndex = 17;
+            this.cbAlwaysUpdate.Text = "Always update";
+            this.cbAlwaysUpdate.UseVisualStyleBackColor = true;
+            this.cbAlwaysUpdate.CheckedChanged += new System.EventHandler(this.cbAlwaysUpdate_CheckedChanged);
+            // 
+            // cbAddToOldData
+            // 
+            this.cbAddToOldData.AutoSize = true;
+            this.cbAddToOldData.Location = new System.Drawing.Point(216, 294);
+            this.cbAddToOldData.Name = "cbAddToOldData";
+            this.cbAddToOldData.Size = new System.Drawing.Size(122, 20);
+            this.cbAddToOldData.TabIndex = 18;
+            this.cbAddToOldData.Text = "Add to old Data";
+            this.cbAddToOldData.UseVisualStyleBackColor = true;
+            this.cbAddToOldData.CheckedChanged += new System.EventHandler(this.cbAddToOldData_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(892, 582);
+            this.ClientSize = new System.Drawing.Size(1309, 599);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.progressBar1);
@@ -360,6 +449,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -392,6 +485,13 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox tReceivedData;
+        private System.Windows.Forms.CheckBox cbAddToOldData;
+        private System.Windows.Forms.CheckBox cbAlwaysUpdate;
     }
 }
 

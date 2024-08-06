@@ -100,10 +100,13 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Blue;
             this.textBox1.Location = new System.Drawing.Point(49, 58);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 49);
+            this.textBox1.Size = new System.Drawing.Size(93, 49);
             this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "36";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Display
             // 
@@ -165,26 +168,35 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(232, 159);
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.textBox4.Location = new System.Drawing.Point(233, 159);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 49);
+            this.textBox4.Size = new System.Drawing.Size(93, 49);
             this.textBox4.TabIndex = 8;
+            this.textBox4.Text = "102";
+            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(232, 58);
+            this.textBox3.ForeColor = System.Drawing.Color.Red;
+            this.textBox3.Location = new System.Drawing.Point(233, 58);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 49);
+            this.textBox3.Size = new System.Drawing.Size(93, 49);
             this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "52";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Fuchsia;
             this.textBox2.Location = new System.Drawing.Point(49, 159);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 49);
+            this.textBox2.Size = new System.Drawing.Size(93, 49);
             this.textBox2.TabIndex = 6;
+            this.textBox2.Text = "1";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox5
             // 

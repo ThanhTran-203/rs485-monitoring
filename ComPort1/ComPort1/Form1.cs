@@ -12,8 +12,8 @@ namespace ComPort1
 {
     public partial class Form1 : Form
     {
-        string dataOut; 
-
+        string dataOut;
+        string dataIn;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,11 @@ namespace ComPort1
         {
             string[] ports = SerialPort.GetPortNames();
             cbComPort.Items.AddRange(ports);
-
+            btConnect.Enabled = true;
+            btExit.Enabled = false;
+            btStop.Enabled = false;
+            cbAlwaysUpdate.Enabled = true;
+            cbAddToOldData.Enabled = true;
         }
 
         private void btConnect_Click(object sender, EventArgs e)
@@ -37,13 +41,17 @@ namespace ComPort1
                 serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbStopBit.Text);
 
                 serialPort1.Open();
-                progressBar1.Value = 100; 
-
+                progressBar1.Value = 100;
+                btConnect.Enabled = false;
+                btExit.Enabled = true;
+                btStop.Enabled = true;
+                lbStatus.Text = "ON";
             }
 
             catch (Exception err)
             {
                 MessageBox.Show(err.Message,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;   
+                 
             }
         }
 
@@ -54,6 +62,11 @@ namespace ComPort1
                 serialPort1.Close();
                 progressBar1.Value = 0;
             }
+            btConnect.Enabled = true;
+            btExit.Enabled = false;
+            btStop.Enabled = false;
+            lbStatus.Text = "OFF";
+
         }
 
         private void btSend_Click(object sender, EventArgs e)
@@ -76,6 +89,49 @@ namespace ComPort1
             Form2 form2 = new Form2();
             form2.Show();
             this.Hide();
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            if(tBoxDataOut.Text != "")
+            {
+                tBoxDataOut.Text = "";
+            }
+        }
+
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            dataIn = serialPort1.ReadExisting();
+            this.Invoke(new EventHandler(ShowData));
+        }
+        private void ShowData(object sender, EventArgs e)
+        {
+            if(cbAlwaysUpdate.Checked)
+            {
+                tReceivedData.Text = dataIn;
+            }
+            else if(cbAddToOldData.Checked)
+            {
+                tReceivedData.Text += dataIn;
+            }
+        }
+
+        private void cbAlwaysUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbAlwaysUpdate.Checked)
+            {
+                cbAlwaysUpdate.Checked = true;
+                cbAddToOldData.Checked = false;
+            }
+        }
+
+        private void cbAddToOldData_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbAddToOldData.Checked)
+            {
+                cbAddToOldData.Checked = true;
+                cbAlwaysUpdate.Checked = false; 
+            }
         }
     }
 }
